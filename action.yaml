@@ -1,0 +1,11 @@
+name: 'Verify Linked Issue'
+description: 'A GitHub action that verifies your pull request contains a link for adventurer guild.'
+branding:
+  icon: check-square
+  color: green
+inputs:
+  message:
+    description: The text to use as the PR comment for when for pull requests with no linked issues.
+runs:
+  using: 'node20'
+  main: 'src/index.js'
