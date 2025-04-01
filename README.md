@@ -33,7 +33,7 @@ jobs:
           API_URL: "https://api.uat.adventurer.tech"
           API_KEY: ${{ secrets.API_KEY }} # 可选
         with:
-          message: "请在 PR 描述中添加工单链接。"
+          message: "请添加 ticket 链接!"
 ```
 
 ### 3. 自定义消息（可选）
