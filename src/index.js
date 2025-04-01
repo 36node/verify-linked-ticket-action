@@ -67,10 +67,7 @@ class TicketAPI {
                 },
             });
 
-            core.debug(`Response: ${response.ok} - ${response.status}`);
-            core.debug(`Response body: ${await response.text()}`);
-
-            return { isValid: response.ok, status: response.status };
+            return { isValid: response.ok, status: response.status, body: await response.text() };
         } catch (error) {
             core.debug(`API error: ${error.message}`);
             return {
@@ -134,6 +131,7 @@ class TicketVerificationAction {
         core.info(`Verifying ticket - Project ID: ${projectId}, Ticket ID: ${ticketId}`);
 
         const result = await this.api.verifyTicket(projectId, ticketId);
+        core.debug(`Api verify ticket result: ${result}`);
 
         if (result.isValid) {
             core.info('✅ Ticket verification successful!');
