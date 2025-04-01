@@ -67,11 +67,10 @@ class TicketAPI {
                 },
             });
 
-            return {
-                isValid: response.ok,
-                status: response.status,
-                statusText: response.statusText
-            };
+            console.debug(`Response: ${response.ok} - ${response.status}`);
+            console.debug(`Response body: ${await response.text()}`);
+
+            return { isValid: response.ok, status: response.status };
         } catch (error) {
             core.debug(`API error: ${error.message}`);
             return {
