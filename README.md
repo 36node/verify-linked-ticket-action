@@ -29,8 +29,8 @@ jobs:
         uses: your-org/pr-ticket-verifier@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_URL: "https://guild.uat.adventurer.tech"
-          API_URL: "https://api.uat.adventurer.tech"
+          BASE_URL: "https://guild.adventurer.tech"
+          API_URL: "https://api.adventurer.tech"
           API_KEY: ${{ secrets.API_KEY }} # 可选
         with:
           message: "请添加 ticket 链接!"
