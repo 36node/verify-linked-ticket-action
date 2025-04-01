@@ -6,7 +6,7 @@ class Config {
     constructor() {
         this.context = github.context;
         this.baseUrl = process.env.BASE_URL;
-        this.apiUrl = process.env.API_URL || this.baseUrl + '/api';
+        this.apiUrl = process.env.API_URL + '/api';
         this.apiKey = process.env.API_KEY || '';
         this.message = core.getInput('message') || process.env.MESSAGE || '请添加 ticket 链接!';
         this.token = process.env.GITHUB_TOKEN;
