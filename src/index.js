@@ -131,7 +131,7 @@ class TicketVerificationAction {
         core.info(`Verifying ticket - Project ID: ${projectId}, Ticket ID: ${ticketId}`);
 
         const result = await this.api.verifyTicket(projectId, ticketId);
-        core.debug(`Api verify ticket result: ${result}`);
+        core.info(`Api verify ticket result: ${result}`);
 
         if (result.isValid) {
             core.info('✅ Ticket verification successful!');
